@@ -8,7 +8,10 @@ const uiRouter = require('./rounters/ui')
 
 const app = express()
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT
+
+console.log(process.env.SG_API_KEY)
+console.log("JWT_KEY ",process.env.JWT_KEY)
 
 const multer = require('multer')
 const upload = multer({
