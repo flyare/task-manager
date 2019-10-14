@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/npo.js",
     "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
-    "test": "jest --watch"
+    "test": "env-cmd -f ./config/test.env jest --watch"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +18,7 @@
     "@sendgrid/mail": "^6.4.0",
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
-    "hbs": "^4.0.4",
+    "hbs": "^4.0.6",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.3.2",
     "mongoose": "^5.7.1",
@@ -25,6 +28,7 @@
   },
   "devDependencies": {
     "env-cmd": "^10.0.1",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2"
   }
 }
